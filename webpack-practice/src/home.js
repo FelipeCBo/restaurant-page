@@ -1,12 +1,19 @@
 export default function loadHome() {
-  const content = document.getElementById("content");
+  const div = document.createElement("div");
 
   const title = document.createElement("h1");
-  title.textContent = "Meu Restaurante";
+  title.textContent = "🍽️ Meu Restaurante";
+
+  const subtitle = document.createElement("h2");
+  subtitle.textContent = "Comida incrível, todos os dias";
 
   const text = document.createElement("p");
-  text.textContent = "O melhor lugar para comer bem!";
+  text.textContent =
+    "Venha experimentar pratos deliciosos em um ambiente acolhedor.";
 
-  content.appendChild(title);
-  content.appendChild(text);
+  div.appendChild(title);
+  div.appendChild(subtitle);
+  div.appendChild(text);
+
+  return div;
 }

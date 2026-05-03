@@ -1,12 +1,22 @@
 export default function loadMenu() {
-  const content = document.getElementById("content");
+  const div = document.createElement("div");
 
   const title = document.createElement("h1");
   title.textContent = "Menu";
 
-  const item = document.createElement("p");
-  item.textContent = "Pizza - R$ 30";
+  div.appendChild(title);
 
-  content.appendChild(title);
-  content.appendChild(item);
+  const items = [
+    "🍕 Pizza - R$ 30",
+    "🍔 Hambúrguer - R$ 25",
+    "🍣 Sushi - R$ 40",
+  ];
+
+  items.forEach((item) => {
+    const p = document.createElement("p");
+    p.textContent = item;
+    div.appendChild(p);
+  });
+
+  return div;
 }

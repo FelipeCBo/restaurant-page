@@ -1,12 +1,15 @@
 export default function loadAbout() {
-  const content = document.getElementById("content");
+  const div = document.createElement("div");
 
   const title = document.createElement("h1");
-  title.textContent = "Sobre";
+  title.textContent = "Sobre nós";
 
   const text = document.createElement("p");
-  text.textContent = "Somos o melhor restaurante da cidade!";
+  text.textContent =
+    "Desde 1990 oferecendo qualidade e sabor. Nossa missão é servir você com excelência.";
 
-  content.appendChild(title);
-  content.appendChild(text);
+  div.appendChild(title);
+  div.appendChild(text);
+
+  return div;
 }
